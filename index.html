@@ -379,12 +379,13 @@ const response = await fetch(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+     'x-api-key':'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',
       'Authorization': 'Bearer ' + HF_KEY
     },
     body: JSON.stringify({
       model: 'mistralai/Mistral-7B-Instruct-v0.3',
-      messages: messages,
-      max_tokens: 500
+      messages: history,
+      max_tokens: 1000
     })
   }
 );
